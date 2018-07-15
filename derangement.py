@@ -8,7 +8,7 @@ def num_permutations(n):
 	for a given number of n objects
 	with n items where it is not 
 	permissible for object i to 
-	to be assigned item i
+	to be assigned to item i
 	
 	https://en.wikipedia.org/w/index.php?title=Derangement
 
@@ -18,11 +18,12 @@ def num_permutations(n):
 	if n < 0:
 		print("Input must be >= 0")
 		exit(1)
-	if n == 1: return 0
-	elif n == 0: return 1
+	elif n == 0: return 1 
+	elif n == 1: return 0 
 	else: return (n-1)*( num_permutations(n-1)+num_permutations(n-2) ) # recursive call 
 
 def factorial(n):
+
 	if n < 0: 
 	     print("Input must be >= 0")
 	     exit(1)
@@ -43,6 +44,7 @@ def est_num_permutations(n):
 
 	round function returns integer
 	"""
+
 	from math import e
 
 	return round( factorial(n) / e  )
